@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      I'm teaching myself Alpine
+    </title>
+    <meta charset="UTF-8"/>
+    
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
+    <link rel="stylesheet" href="/style.css?v=1615238338862"/>
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer
+    ></script>
+    
+  </head>
+  <body>
+    
+  
+  <div class="example" id="x-data-example" x-data="{open:false}">
+      <button class="rounded-md px-5 py-3 bg-red-200" @click="open = true">
+        Show/Hide List
+      </button>
+      <ul
+        class="list-disc list-inside p-4 bg-green-100 mt-5"
+        x-show="open"
+        @click.away="open = false"
+      >
+        <li>x-show waits on the variable 'open' to show</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+    </div>
+    
+
+  </body>
+</html>
